@@ -7,10 +7,10 @@ describe('generator-jhipster-ci-circleci:app', () => {
   beforeAll(() => {
     return helpers
       .run(path.join(__dirname, '../generators/app'))
-      .withPrompts({ someAnswer: true });
+      .withPrompts({ override: true });
   });
 
   it('creates files', () => {
-    assert.file(['dummyfile.txt']);
+    assert.file(['.circleci/config.yml']);
   });
 });
