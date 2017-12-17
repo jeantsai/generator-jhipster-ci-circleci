@@ -1,0 +1,84 @@
+{
+  "name": "generator-jhipster-ci-circleci",
+  "version": "0.0.0",
+  "description": "Generator of CircleCI (ver 2) supports for JHipster",
+  "homepage": "https://github.com/jeantsai/generator-jhipster-ci-circleci",
+  "author": {
+    "name": "Cai Jun",
+    "email": "jeantsai@qq.com",
+    "url": "https://github.com/jeantsai"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "jhipster",
+    "CircleCI",
+    "Generator",
+    "Yeoman",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "coveralls": "^2.13.1",
+    "eslint": "^4.1.0",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-config-xo": "^0.18.2",
+    "eslint-plugin-prettier": "^2.2.0",
+    "husky": "^0.14.3",
+    "jest": "^21.0.0",
+    "jest-cli": "^21.0.0",
+    "lint-staged": "^4.2.1",
+    "nsp": "^2.6.3",
+    "prettier": "^1.7.0",
+    "yeoman-assert": "^3.1.0",
+    "yeoman-test": "^1.7.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^2.0.1",
+    "yosay": "^2.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint .",
+    "precommit": "lint-staged",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "printWidth": 90
+        }
+      ]
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "repository": "jeantsai/generator-jhipster-ci-circleci",
+  "license": "MIT"
+}
