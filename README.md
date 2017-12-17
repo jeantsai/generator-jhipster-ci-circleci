@@ -6,8 +6,8 @@
 First, install [Yeoman](http://yeoman.io) and generator-jhipster-ci-circleci using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
-npm install -g yo
-npm install -g generator-jhipster-ci-circleci
+yarn global add yo
+yarn global add generator-jhipster-ci-circleci
 ```
 
 Then generate your new project:
