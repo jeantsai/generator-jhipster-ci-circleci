@@ -21,11 +21,10 @@ module.exports = class extends Generator {
         // To access props later use this.props.someAnswer;
         this.props = props;
       });
-    } else {
-      this.props = {
-        override: true
-      };
     }
+    this.props = {
+      override: true
+    };
   }
 
   writing() {
@@ -35,7 +34,6 @@ module.exports = class extends Generator {
         this.destinationPath('.circleci/config.yml')
       );
       this.log('Circle CI configuration file has been created successfully.');
-    };
+    }
   }
-
 };
